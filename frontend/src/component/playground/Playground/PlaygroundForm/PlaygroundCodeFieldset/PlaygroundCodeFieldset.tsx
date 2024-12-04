@@ -19,8 +19,6 @@ import {
     useTheme,
     Autocomplete,
     type SelectChangeEvent,
-    Checkbox,
-    styled
 } from '@mui/material';
 
 import debounce from 'debounce';
@@ -157,7 +155,7 @@ export const PlaygroundCodeFieldset: VFC<IPlaygroundCodeFieldsetProps> = ({
         if (contextField === 'currentTime') {
             const validDate = parseValidDate(contextValue);
             const now = new Date();
-
+            
             const value = validDate
                 ? parseDateValue(validDate.toISOString())
                 : parseDateValue(now.toISOString());
